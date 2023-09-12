@@ -20,14 +20,14 @@ const ListaOpciones = () => {
         <label>Equipo</label>
         <select>
             {equipos.map( (equipo, index) => {
-                let sentencia = ``
-                if(index === 0) {
-                    sentencia = <option key={index} selected disabled hidden>{equipo}</option>
+                var sentencia = ``
+                if(index == 0) {
+                    sentencia = <option key={index} defaultValue={true} hidden>Seleccionar equipo</option>
                 }
                 else{
                     sentencia = <option key={index}>{equipo}</option>
                 }
-            return sentencia })}
+                return sentencia })}
         </select>
     </div>
 }

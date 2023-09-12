@@ -1,0 +1,23 @@
+.orgSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.titulo {
+    position: absolute;
+    color: #6278F7;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 72px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #6278F7;;
+}
+
+.orgSection img {
+    position: absolute;
+    right: 30%;
+    cursor: pointer;
+}
