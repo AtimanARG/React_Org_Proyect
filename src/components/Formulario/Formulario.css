@@ -1,6 +1,6 @@
 .formulario {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 80px 0; /* 80px top and bottom, 0 left and right */
 }
 
