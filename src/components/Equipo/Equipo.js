@@ -6,7 +6,7 @@ const Equipo = (props) => {
 
     // Destructuracion
     const { colorPrimario, colorSecundario, titulo, id } = props.datos
-    const { colaboradores, eliminarColaborador, actualizarColor } = props
+    const { colaboradores, eliminarColaborador, actualizarColor, like } = props
     const estiloTitulo = {borderColor: colorPrimario}
     const objeto = {backgroundColor: hexToRgba(colorPrimario, 0.6) }
 
@@ -32,6 +32,7 @@ const Equipo = (props) => {
                     colorPrimario={colorPrimario}
                     colorSecundario={colorSecundario}
                     eliminarColaborador={eliminarColaborador}
+                    like={like}
                     /> )
                 }
             </div>

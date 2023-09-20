@@ -16,35 +16,40 @@ function App() {
     nombre: "Atilio",
     puesto: "Dev",
     foto: "https://github.com/AtimanARG.png",
-    equipo: "Devops"
+    equipo: "Devops",
+    fav: true,
     },
     {
     id: uuid(),
     nombre: "Peter",
     puesto: "Dev",
     foto: "https://github.com/AtimanARG.png",
-    equipo: "Investigacion y Gestión"
+    equipo: "Investigacion y Gestión",
+    fav: false,
     },
     {
     id: uuid(),
     nombre: "Ivan",
     puesto: "Dev",
     foto: "https://github.com/AtimanARG.png",
-    equipo: "Front End"
+    equipo: "Front End",
+    fav: false,
     },
     {
     id: uuid(),
     nombre: "Massi",
     puesto: "Dev",
     foto: "https://github.com/AtimanARG.png",
-    equipo: "Móvil"
+    equipo: "Móvil",
+    fav: false,
     },
     {
     id: uuid(),
     nombre: "Octi",
     puesto: "Dev",
     foto: "https://github.com/AtimanARG.png",
-    equipo: "Programación"
+    equipo: "Programación",
+    fav: false,
     },
 ])
 
@@ -121,6 +126,17 @@ function App() {
     ActualizarEquipos([...equipos, {...nuevoEquipo, id: uuid()}])
   }
 
+  const like = (id) => {
+    const colaboradoresActualizados = colaboradores.map((colaborador) => {
+      if(colaborador.id === id){
+        colaborador.fav = !colaborador.fav
+      }
+      return colaborador
+    })
+
+    actualizarColaboradores(colaboradoresActualizados)
+  }
+
 
   // Eliminar colaborador
   const eliminarColaborador = (id) => {
@@ -150,6 +166,7 @@ function App() {
           colaboradores={colaboradores.filter(  colaborador => colaborador.equipo === equipo.titulo )}
           eliminarColaborador={eliminarColaborador}
           actualizarColor={actualizarColor}
+          like={like}
           /> )
       }
       <Footer />
